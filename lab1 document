@@ -1,0 +1,12 @@
+Introduction:
+Implementing iterative and strassen’s algorithms for matrix multiplication using python language along with unit test.
+
+Approach:
+I have used 3 for loops to implement iterative algorithm in which I pass the value of n and p which are the number of rows and columns of the resultant matrix, respectively, along with matrix a and matrix b. the algorithms return the resultant matrix in the form of lists of lists.
+For strassen’s algorithms, I have used recursion method. Matrix a nad b are passed to the function and the resultant is returned. This method is used only for matrix which are of the power of 2 and no other matrix. 
+
+How to run:
+There are two files matrix and test, the test file calls both the functions and run the tests. Just run the script test using idle and it will print the result of test cases.
+
+Analysis:
+Stressen’s algorithm is too lengthy and complex to code rather than iterative method but it’s complexity is less than iterative in terms of big O where it has got an edge.
