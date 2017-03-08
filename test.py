@@ -1,40 +1,21 @@
-import matrix
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Mar 08 11:25:27 2017
 
-#input test1
-a=[[2,2],[2,2]]
-b=[[2,2],[2,2]]
+@author: MaryamBaig
+"""
+import reservation
+Booking=[]
 
-#output
-result=[[8,8],[8,8]]
+cust=reservation.Customer('Maryam')           
+reserve=reservation.Reserve_Table(cust,4,'15:00')
 
-mat=matrix.iterativemultiply(a,b,2,2)  #result
-if( mat== result):
-    print "iterative test1 passed"
-else:
-    print "iterative test1 failed"
+res=reservation.Hotel_Resources()
+table=res.check_table_availability(reserve.people)
+res.tables_capacity[table]-=1
+time=res.valid_time(reserve.get_time())
 
-mat=matrix.strassens(a,b)   # result
+if(table!='No table available' and time==True):
+    Booking.append((cust.get_name(),table,reserve.get_time())
+        
 
-if( mat== result):
-    print "strassens test1 passed"
-else:
-    print " strassens test1 failed"
-
-#input test2
-a=[[4,4,4,4],[4,4,4,4],[4,4,4,4],[4,4,4,4]]
-b=[[4,4,4,4],[4,4,4,4],[4,4,4,4],[4,4,4,4]]
-#output
-result=[[64,64,64,64],[64,64,64,64],[64,64,64,64],[64,64,64,64]]
-
-mat=matrix.strassens(a,b)
-if( mat== result):
-    print "strassens test2 passed"
-else:
-    print "strassens test2 failed"
-
-
-mat=matrix.iterativemultiply(a,b,4,4)
-if( mat== result):
-    print "iterative test2 passed"
-else:
-    print "iterative test2 failed"
