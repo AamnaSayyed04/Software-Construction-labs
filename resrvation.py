@@ -1,8 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Spyder Editor
-
-"""
 
 class Customer:
     def __init__(self,name):
@@ -22,7 +17,7 @@ class Reserve_Table:
         self.time=time
         
     def set_people(self,people):
-        self.table=table
+        self.people=people
         
     def get_people(self):
         return self.people
@@ -69,8 +64,9 @@ class Hotel_Resources:
             return False
         elif(hours>=21 and minutes>=15):
             return False
+        else: return True
         
-Booking=[]
+
         
 
 
