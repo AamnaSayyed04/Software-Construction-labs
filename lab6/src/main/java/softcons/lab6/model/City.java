@@ -1,5 +1,9 @@
 package softcons.lab6.model;
 
+/**
+ *
+ * @author MaryamBaig
+ */
 import javax.persistence.*;
 
 /**
@@ -73,3 +77,4 @@ public class City {
     }
     
 }
+
