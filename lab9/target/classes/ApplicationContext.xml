@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <bean id="dateFormat" class="java.text.SimpleDateFormat">
+        <constructor-arg value="dd-MM-yyyy"/>
+    </bean>
+
+
+    <bean id="clo" class="pk.edu.nust.seecs.gradebook.entity.Clo">
+        
+        <property name="name">
+            <value>CLO1</value>
+        </property>
+        <property name="description">
+            <value>description clo1</value>
+        </property>
+        <property name="plo">
+            <value>Plo1</value>
+        </property>
+        <property name="btLevel">
+            <value>btlevel1</value>
+        </property>
+    </bean>
+    
+    <bean id="content" class="pk.edu.nust.seecs.gradebook.entity.Content">
+        <property name="title">
+            <value>Assignment1</value>
+        </property>
+        <property name="description">
+            <value>Assginment1 description</value>
+        </property>    
+        <property name="starttime">
+            <bean factory-bean="dateFormat" factory-method="parse">
+                <constructor-arg value="10-04-2017" />
+            </bean>
+        </property>
+    </bean>
+    
+    <bean id="course" class="pk.edu.nust.seecs.gradebook.entity.Course">
+        <property name="classtitle">
+            <value>BESE-5A</value>
+        </property>
+    </bean>
+    
+    
+
+</beans>
